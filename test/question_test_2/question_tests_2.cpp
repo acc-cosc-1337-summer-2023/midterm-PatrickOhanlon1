@@ -10,3 +10,14 @@ TEST_CASE("test")
 {
 	REQUIRE(test_config() == true);
 }
+
+TEST_CASE("roll")
+{
+	for (int i = 0; i < 10; i++)
+	{
+		int random = roll_die();
+		bool test_roll = random < 7 && random > 0;
+		REQUIRE(test_roll);
+	}
+	
+}
